@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4567CE61D8EE55500D7DD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CE51D8EE55500D7DD36 /* AppDelegate.swift */; };
-		E4567CE81D8EE55500D7DD36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CE71D8EE55500D7DD36 /* ViewController.swift */; };
-		E4567CEB1D8EE55500D7DD36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4567CE91D8EE55500D7DD36 /* Main.storyboard */; };
-		E4567CEE1D8EE55500D7DD36 /* TravelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4567CEC1D8EE55500D7DD36 /* TravelApp.xcdatamodeld */; };
-		E4567CF01D8EE55500D7DD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4567CEF1D8EE55500D7DD36 /* Assets.xcassets */; };
-		E4567CF31D8EE55500D7DD36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4567CF11D8EE55500D7DD36 /* LaunchScreen.storyboard */; };
+		BA2C48A21D8EE9BC00BAB40B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */; };
+		BA2C48A31D8EE9BC00BAB40B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */; };
+		BA2C48A41D8EE9BC00BAB40B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */; };
+		BA2C48A51D8EE9BC00BAB40B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */; };
+		BA2C48A61D8EE9BC00BAB40B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */; };
+		BA2C48A71D8EE9BC00BAB40B /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */; };
+		BA2C48A81D8EE9BC00BAB40B /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48911D8EE9BC00BAB40B /* Place+CoreDataProperties.swift */; };
+		BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48921D8EE9BC00BAB40B /* Place.swift */; };
+		BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */; };
+		BA2C48AB1D8EE9BC00BAB40B /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */; };
+		BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */; };
+		BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */; };
+		BA2C48AE1D8EE9BC00BAB40B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489A1D8EE9BC00BAB40B /* LaunchScreen.storyboard */; };
+		BA2C48AF1D8EE9BC00BAB40B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489C1D8EE9BC00BAB40B /* Main.storyboard */; };
+		BA2C48B01D8EE9BC00BAB40B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489E1D8EE9BC00BAB40B /* Info.plist */; };
+		BA2C48B11D8EE9BC00BAB40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */; };
+		BA2C48B21D8EE9BC00BAB40B /* Resources.json in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A11D8EE9BC00BAB40B /* Resources.json */; };
 		E4567CFE1D8EE55600D7DD36 /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */; };
 		E4567D091D8EE55600D7DD36 /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */; };
 /* End PBXBuildFile section */
@@ -35,14 +46,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
+		BA2C48911D8EE9BC00BAB40B /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA2C48921D8EE9BC00BAB40B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaceDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
+		BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrevelApp.xcdatamodel; sourceTree = "<group>"; };
+		BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BA2C489B1D8EE9BC00BAB40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA2C489D1D8EE9BC00BAB40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		BA2C489E1D8EE9BC00BAB40B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA2C48A11D8EE9BC00BAB40B /* Resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Resources.json; sourceTree = "<group>"; };
 		E4567CE21D8EE55500D7DD36 /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4567CE51D8EE55500D7DD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4567CE71D8EE55500D7DD36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4567CEA1D8EE55500D7DD36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E4567CED1D8EE55500D7DD36 /* TravelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelApp.xcdatamodel; sourceTree = "<group>"; };
-		E4567CEF1D8EE55500D7DD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E4567CF21D8EE55500D7DD36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E4567CF41D8EE55500D7DD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4567CF91D8EE55600D7DD36 /* TravelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppTests.swift; sourceTree = "<group>"; };
 		E4567CFF1D8EE55600D7DD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +97,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA2C48871D8EE9BC00BAB40B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48881D8EE9BC00BAB40B /* Main */,
+				BA2C488C1D8EE9BC00BAB40B /* Managers */,
+				BA2C48901D8EE9BC00BAB40B /* Models */,
+				BA2C48971D8EE9BC00BAB40B /* Views */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BA2C48881D8EE9BC00BAB40B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */,
+				BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */,
+				BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BA2C488C1D8EE9BC00BAB40B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */,
+				BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */,
+				BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BA2C48901D8EE9BC00BAB40B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48911D8EE9BC00BAB40B /* Place+CoreDataProperties.swift */,
+				BA2C48921D8EE9BC00BAB40B /* Place.swift */,
+				BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */,
+				BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */,
+				BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA2C48971D8EE9BC00BAB40B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA2C48991D8EE9BC00BAB40B /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C489A1D8EE9BC00BAB40B /* LaunchScreen.storyboard */,
+				BA2C489C1D8EE9BC00BAB40B /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		BA2C489F1D8EE9BC00BAB40B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */,
+				BA2C48A11D8EE9BC00BAB40B /* Resources.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E4567CD91D8EE55500D7DD36 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +189,10 @@
 		E4567CE41D8EE55500D7DD36 /* TravelApp */ = {
 			isa = PBXGroup;
 			children = (
-				E4567CE51D8EE55500D7DD36 /* AppDelegate.swift */,
-				E4567CE71D8EE55500D7DD36 /* ViewController.swift */,
-				E4567CE91D8EE55500D7DD36 /* Main.storyboard */,
-				E4567CEF1D8EE55500D7DD36 /* Assets.xcassets */,
-				E4567CF11D8EE55500D7DD36 /* LaunchScreen.storyboard */,
-				E4567CF41D8EE55500D7DD36 /* Info.plist */,
-				E4567CEC1D8EE55500D7DD36 /* TravelApp.xcdatamodeld */,
+				BA2C48871D8EE9BC00BAB40B /* Application */,
+				BA2C48991D8EE9BC00BAB40B /* Base.lproj */,
+				BA2C489F1D8EE9BC00BAB40B /* Resources */,
+				BA2C489E1D8EE9BC00BAB40B /* Info.plist */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";
@@ -196,13 +283,17 @@
 				TargetAttributes = {
 					E4567CE11D8EE55500D7DD36 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = E232RTVQ54;
+						LastSwiftMigration = 0800;
 					};
 					E4567CF81D8EE55600D7DD36 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = E4567CE11D8EE55500D7DD36;
 					};
 					E4567D031D8EE55600D7DD36 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = E4567CE11D8EE55500D7DD36;
 					};
 				};
@@ -232,9 +323,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4567CF31D8EE55500D7DD36 /* LaunchScreen.storyboard in Resources */,
-				E4567CF01D8EE55500D7DD36 /* Assets.xcassets in Resources */,
-				E4567CEB1D8EE55500D7DD36 /* Main.storyboard in Resources */,
+				BA2C48AE1D8EE9BC00BAB40B /* LaunchScreen.storyboard in Resources */,
+				BA2C48AF1D8EE9BC00BAB40B /* Main.storyboard in Resources */,
+				BA2C48B11D8EE9BC00BAB40B /* Assets.xcassets in Resources */,
+				BA2C48B21D8EE9BC00BAB40B /* Resources.json in Resources */,
+				BA2C48B01D8EE9BC00BAB40B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +352,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4567CE81D8EE55500D7DD36 /* ViewController.swift in Sources */,
-				E4567CE61D8EE55500D7DD36 /* AppDelegate.swift in Sources */,
-				E4567CEE1D8EE55500D7DD36 /* TravelApp.xcdatamodeld in Sources */,
+				BA2C48AB1D8EE9BC00BAB40B /* PlaceDetails.swift in Sources */,
+				BA2C48A81D8EE9BC00BAB40B /* Place+CoreDataProperties.swift in Sources */,
+				BA2C48A21D8EE9BC00BAB40B /* AppDelegate.swift in Sources */,
+				BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */,
+				BA2C48A61D8EE9BC00BAB40B /* DataManager.swift in Sources */,
+				BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */,
+				BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */,
+				BA2C48A71D8EE9BC00BAB40B /* HTTPSessionManager.swift in Sources */,
+				BA2C48A31D8EE9BC00BAB40B /* DetailViewController.swift in Sources */,
+				BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */,
+				BA2C48A51D8EE9BC00BAB40B /* CoreDataManager.swift in Sources */,
+				BA2C48A41D8EE9BC00BAB40B /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,20 +399,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E4567CE91D8EE55500D7DD36 /* Main.storyboard */ = {
+		BA2C489A1D8EE9BC00BAB40B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E4567CEA1D8EE55500D7DD36 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E4567CF11D8EE55500D7DD36 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4567CF21D8EE55500D7DD36 /* Base */,
+				BA2C489B1D8EE9BC00BAB40B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BA2C489C1D8EE9BC00BAB40B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA2C489D1D8EE9BC00BAB40B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -405,10 +507,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E232RTVQ54;
 				INFOPLIST_FILE = TravelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -416,21 +520,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E232RTVQ54;
 				INFOPLIST_FILE = TravelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
 		E4567D111D8EE55600D7DD36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TravelAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravelApp.app/TravelApp";
 			};
 			name = Debug;
@@ -438,11 +546,13 @@
 		E4567D121D8EE55600D7DD36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TravelAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TravelApp.app/TravelApp";
 			};
 			name = Release;
@@ -450,10 +560,12 @@
 		E4567D141D8EE55600D7DD36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = TravelAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = TravelApp;
 			};
 			name = Debug;
@@ -461,10 +573,12 @@
 		E4567D151D8EE55600D7DD36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = TravelAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = TravelApp;
 			};
 			name = Release;
@@ -488,6 +602,7 @@
 				E4567D0F1D8EE55600D7DD36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4567D101D8EE55600D7DD36 /* Build configuration list for PBXNativeTarget "TravelAppTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +611,7 @@
 				E4567D121D8EE55600D7DD36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4567D131D8EE55600D7DD36 /* Build configuration list for PBXNativeTarget "TravelAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,17 +620,18 @@
 				E4567D151D8EE55600D7DD36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E4567CEC1D8EE55500D7DD36 /* TravelApp.xcdatamodeld */ = {
+		BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E4567CED1D8EE55500D7DD36 /* TravelApp.xcdatamodel */,
+				BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */,
 			);
-			currentVersion = E4567CED1D8EE55500D7DD36 /* TravelApp.xcdatamodel */;
-			path = TravelApp.xcdatamodeld;
+			currentVersion = BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */;
+			path = TrevelApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
