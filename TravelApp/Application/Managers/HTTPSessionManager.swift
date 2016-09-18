@@ -22,6 +22,11 @@ class HTTPSessionManager: NSObject {
 		let url = NSURL(string: self.baseURL)
         self.makeAsyncHTTPGetRequest(url!, completion: completion)
 	}
+    
+    func loadPlace(id: NSNumber, completion: (data: NSData?, error: NSError?) -> Void) -> Void {
+        let url = NSURL(string: "\(self.baseURL)/\(id)")
+        self.makeAsyncHTTPGetRequest(url!, completion: completion)
+    }
 
 	// MARK:- Utility Methods
 	// MARK: Perform GET Requests

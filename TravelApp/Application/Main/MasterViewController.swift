@@ -11,6 +11,7 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate, DataManagerDelegate {
 
+    private static let detailSegueIdentifier = "showDetailSegue"
 	private var places: [Place] = []
     
 	private var detailViewController: DetailViewController? = nil
@@ -18,7 +19,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
 		if let split = self.splitViewController {
 			let controllers = split.viewControllers
@@ -35,20 +35,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 	override func viewWillAppear(animated: Bool) {
 		self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
 		super.viewWillAppear(animated)
-        /*
-        let url = NSURL(string: "https://www.googleapis.com/customsearch/v1?q=mane&key=AIzaSyBV_JhGLChkeGPXQMN_jfs_B3-H07GymtE&cx=001314759666045002582:onlaqxqgm-i")!
-        
-        guard let data = HTTPSessionManager.sharedInstance.makeSyncHTTPGetRequest(url) else {
-            return
-        }
-        let mm = data as? String
-        let a = self.getDictionary(data)
-        let keys = a?.allKeys as? [String]
-        let val = a?[keys![0]] as! Dictionary<String, AnyObject>
-        let val1 = val["errors"] as? AnyObject?
-        let val3 = val["code"] as! Int
-        let val2 = val["message"] as! String
-         */
 	}
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
@@ -60,25 +46,29 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         })
     }
     
-    
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
-
-	// MARK: - Segues
-//	/*
-//	 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//	 if segue.identifier == "showDetail" {
-//	 if let indexPath = self.tableView.indexPathForSelectedRow {
-//	 let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-//	 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-//	 controller.detailItem = object
-//	 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-//	 controller.navigationItem.leftItemsSupplementBackButton = true
-//	 }
-//	 }
-//	 }
-//	 */
+    
+    // MARK: - Segues
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == MasterViewController.detailSegueIdentifier {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let place = self.places[indexPath.row]
+                controller.place = place.details
+                controller.title = place.title
+            }
+        }
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            return identifier == MasterViewController.detailSegueIdentifier && nil != self.places[indexPath.row].details
+        }
+        return false
+    }
     
 	// MARK: - Table View
 
@@ -87,10 +77,27 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-		cell.textLabel?.text = self.places[indexPath.row].title
-		return cell
+        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+		//cell.textLabel?.text = self.places[indexPath.row].title
+		//return cell
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("\(String(PlaceTableViewCell))Id", forIndexPath: indexPath) as! PlaceTableViewCell
+        cell.titleLabel.text = self.places[indexPath.row].title
+        cell.backgroundImageView.image = UIImage(named: "image.jpg")
+        return cell
 	}
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let place = self.places[indexPath.row]
+        if nil == place.details {
+            self.loadingView?.show(self.splitViewController!.view)
+            place.loadDetails(self.placeDidUpdate)
+        }
+    }
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 140 // TODO make generic
+    }
     
     // MARK: - DataManagerDelegate
     
@@ -99,6 +106,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.loadingView?.hide()
             self.tableView.reloadData()
+        })
+    }
+    
+    // MARK: - CallBack
+    private func placeDidUpdate() -> Void {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.loadingView?.hide()
+            self.performSegueWithIdentifier(MasterViewController.detailSegueIdentifier, sender: self)
+            
         })
     }
 }

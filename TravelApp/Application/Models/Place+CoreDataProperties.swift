@@ -14,8 +14,8 @@ import CoreData
 
 extension Place {
 
-    @NSManaged var id: NSNumber?
-    @NSManaged var title: String?
+    @NSManaged var id: NSNumber
+    @NSManaged var title: String
     @NSManaged var details: PlaceDetails?
 
 }

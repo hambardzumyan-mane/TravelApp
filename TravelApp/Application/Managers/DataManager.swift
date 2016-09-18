@@ -40,19 +40,22 @@ class DataManager {
     
     // MARK: - Private Methods
     // MARK: Callbacks
+    
     private func placesDidLoad(data: NSData?, error: NSError?) -> Void {
         if nil != error {
             // TODO
             return
         }
-        let items = self.getDictionary(data!)
+        let dict = self.getDictionary(data!)
+        let items = dict[DataManager.BASE_KEY] as! Array<AnyObject>
+
         let places = CoreDataManager.sharedInstance.savePlaces(items)
         self.delegate?.placesDidLoad(places)
     }
     
     // MARK: Utilities
     
-    private func getDictionary(data: NSData) -> Array<AnyObject> {
+    private func getDictionary(data: NSData) -> NSDictionary {
         var dictionary: NSDictionary?
         do {
             dictionary = (try NSJSONSerialization.JSONObjectWithData(data,
@@ -61,11 +64,7 @@ class DataManager {
             NSLog("Error appeared during json serialization: \(error)")
             dictionary = [:]
         }
-        
-        if 0 == dictionary!.count {
-            return []
-        }
-        return dictionary![DataManager.BASE_KEY] as! Array<AnyObject>
+        return dictionary!
     }
 
 }

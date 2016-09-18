@@ -117,6 +117,9 @@ class CoreDataManager { //: NSObject {
             let place = NSEntityDescription.insertNewObjectForEntityForName(String(Place), inManagedObjectContext: managedObjectContext) as! Place
             if let item = placeData as? Dictionary<String, AnyObject> {
                 place.initalize(item)
+                if (0 == place.id || place.title.isEmpty) {
+                    continue
+                }
                 places.append(place)
             }
         }
@@ -137,4 +140,5 @@ class CoreDataManager { //: NSObject {
             fatalError("Failed to fetch places: \(error)")
         }
     }
+    
 }

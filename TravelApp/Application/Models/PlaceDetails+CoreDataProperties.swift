@@ -22,5 +22,4 @@ extension PlaceDetails {
     @NSManaged var address: String?
     @NSManaged var email: String?
     @NSManaged var place: Place?
-
 }

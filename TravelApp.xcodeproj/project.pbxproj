@@ -24,6 +24,7 @@
 		BA2C48B01D8EE9BC00BAB40B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489E1D8EE9BC00BAB40B /* Info.plist */; };
 		BA2C48B11D8EE9BC00BAB40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */; };
 		BA2C48B21D8EE9BC00BAB40B /* Resources.json in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A11D8EE9BC00BAB40B /* Resources.json */; };
+		BA2C48B41D8EEFAF00BAB40B /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */; };
 		E4567CFE1D8EE55600D7DD36 /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */; };
 		E4567D091D8EE55600D7DD36 /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		BA2C489E1D8EE9BC00BAB40B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA2C48A11D8EE9BC00BAB40B /* Resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Resources.json; sourceTree = "<group>"; };
+		BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		E4567CE21D8EE55500D7DD36 /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567CF91D8EE55600D7DD36 /* TravelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppTests.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */,
 				BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */,
 				BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */,
+				BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				BA2C48A81D8EE9BC00BAB40B /* Place+CoreDataProperties.swift in Sources */,
 				BA2C48A21D8EE9BC00BAB40B /* AppDelegate.swift in Sources */,
 				BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */,
+				BA2C48B41D8EEFAF00BAB40B /* PlaceTableViewCell.swift in Sources */,
 				BA2C48A61D8EE9BC00BAB40B /* DataManager.swift in Sources */,
 				BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */,
 				BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */,
