@@ -22,7 +22,7 @@ class ImageLoader: NSObject {
     
     private override init() {}
     
-    func load(name: String, completion: (image: UIImage?) -> Void) -> Void {
+    func load(name: String, completion: (data: NSData?) -> Void) -> Void {
         let task = ImageLoadTask(name: name,
                                  imageDataHandler: completion,
                                  taskCompletionHandler: taskDidComplete)

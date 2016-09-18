@@ -17,13 +17,13 @@ class ImageLoadTask: NSObject {
     static private let SEARCH_PATH: String = "/customsearch/v1"
     
     var name : String
-    var imageDataHandler : (image: UIImage?) -> Void
+    var imageDataHandler : (data: NSData?) -> Void
     var taskCompletionHandler : () -> Void
     
     // MARK: Public methods
     
     init(name: String,
-         imageDataHandler: (image: UIImage?) -> Void,
+         imageDataHandler: (data: NSData?) -> Void,
          taskCompletionHandler: () -> Void) {
         self.name = name
         self.imageDataHandler = imageDataHandler
@@ -51,7 +51,7 @@ class ImageLoadTask: NSObject {
         if (nil != error) {
             print(error)
             taskCompletionHandler()
-            imageDataHandler(image: nil)
+            imageDataHandler(data: nil)
             return
         }
         var dictionary: NSDictionary?
@@ -61,6 +61,11 @@ class ImageLoadTask: NSObject {
         } catch let error {
             NSLog("Error appeared during json serialization: \(error)")
             dictionary = [:]
+        }
+        if (dictionary?.count == 0) {
+            taskCompletionHandler()
+            imageDataHandler(data: nil)
+            return
         }
         let items = dictionary?.objectForKey("items") as! Array<Dictionary<String, AnyObject>>
         let pagemap = items[0]["pagemap"] as! Dictionary<String, Array<AnyObject>>
@@ -75,11 +80,11 @@ class ImageLoadTask: NSObject {
         print("image loaded")
         if (nil != error || nil == data) {
             print(error)
-            imageDataHandler(image: nil)
+            imageDataHandler(data: nil)
             taskCompletionHandler()
             return
         }
-        imageDataHandler(image: UIImage(data: data!))
+        imageDataHandler(data: data!)
         taskCompletionHandler()
     }
 

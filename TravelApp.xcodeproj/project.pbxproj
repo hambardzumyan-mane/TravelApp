@@ -17,7 +17,7 @@
 		BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48921D8EE9BC00BAB40B /* Place.swift */; };
 		BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */; };
 		BA2C48AB1D8EE9BC00BAB40B /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */; };
-		BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */; };
+		BA2C48AC1D8EE9BC00BAB40B /* TravelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48951D8EE9BC00BAB40B /* TravelApp.xcdatamodeld */; };
 		BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */; };
 		BA2C48AE1D8EE9BC00BAB40B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489A1D8EE9BC00BAB40B /* LaunchScreen.storyboard */; };
 		BA2C48AF1D8EE9BC00BAB40B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489C1D8EE9BC00BAB40B /* Main.storyboard */; };
@@ -58,7 +58,7 @@
 		BA2C48921D8EE9BC00BAB40B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaceDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
-		BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrevelApp.xcdatamodel; sourceTree = "<group>"; };
+		BA2C48961D8EE9BC00BAB40B /* TravelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelApp.xcdatamodel; sourceTree = "<group>"; };
 		BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BA2C489B1D8EE9BC00BAB40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA2C489D1D8EE9BC00BAB40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				BA2C48921D8EE9BC00BAB40B /* Place.swift */,
 				BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */,
 				BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */,
-				BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */,
+				BA2C48951D8EE9BC00BAB40B /* TravelApp.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 				BA2C48AB1D8EE9BC00BAB40B /* PlaceDetails.swift in Sources */,
 				BA2C48A81D8EE9BC00BAB40B /* Place+CoreDataProperties.swift in Sources */,
 				BA2C48A21D8EE9BC00BAB40B /* AppDelegate.swift in Sources */,
-				BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */,
+				BA2C48AC1D8EE9BC00BAB40B /* TravelApp.xcdatamodeld in Sources */,
 				BA2C48A61D8EE9BC00BAB40B /* DataManager.swift in Sources */,
 				BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */,
 				BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */,
@@ -633,13 +633,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */ = {
+		BA2C48951D8EE9BC00BAB40B /* TravelApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */,
+				BA2C48961D8EE9BC00BAB40B /* TravelApp.xcdatamodel */,
 			);
-			currentVersion = BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */;
-			path = TrevelApp.xcdatamodeld;
+			currentVersion = BA2C48961D8EE9BC00BAB40B /* TravelApp.xcdatamodel */;
+			path = TravelApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

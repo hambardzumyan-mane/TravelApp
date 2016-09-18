@@ -20,5 +20,13 @@ class Place: NSManagedObject {
         self.id = json["id"] as? Int ?? 0
         self.title = json["title"] as? String ?? ""
         self.details = nil
+        self.image = nil
+        ImageLoader.sharedInstance.load(self.title, completion: imageDataDidLoad)
+        
+    }
+    
+    private func imageDataDidLoad(data: NSData?) {
+        print("gugush")
+        print(self.title)
     }
 }
