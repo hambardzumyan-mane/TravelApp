@@ -26,6 +26,8 @@
 		BA2C48B21D8EE9BC00BAB40B /* Resources.json in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A11D8EE9BC00BAB40B /* Resources.json */; };
 		E4567CFE1D8EE55600D7DD36 /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */; };
 		E4567D091D8EE55600D7DD36 /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */; };
+		E49F9E401D8EEECB001606D9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */; };
+		E49F9E421D8F0A18001606D9 /* ImageLoadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		E4567D041D8EE55600D7DD36 /* TravelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITests.swift; sourceTree = "<group>"; };
 		E4567D0A1D8EE55600D7DD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */,
 				BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */,
 				BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */,
+				E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */,
+				E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -362,8 +368,10 @@
 				BA2C48A71D8EE9BC00BAB40B /* HTTPSessionManager.swift in Sources */,
 				BA2C48A31D8EE9BC00BAB40B /* DetailViewController.swift in Sources */,
 				BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */,
+				E49F9E421D8F0A18001606D9 /* ImageLoadTask.swift in Sources */,
 				BA2C48A51D8EE9BC00BAB40B /* CoreDataManager.swift in Sources */,
 				BA2C48A41D8EE9BC00BAB40B /* MasterViewController.swift in Sources */,
+				E49F9E401D8EEECB001606D9 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
