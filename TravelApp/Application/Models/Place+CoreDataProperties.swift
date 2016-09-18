@@ -2,11 +2,11 @@
 //  Place+CoreDataProperties.swift
 //  TravelApp
 //
-//  Created by Mane Hambardzumyan on 9/13/16.
+//  Created by Areg Gareginyan on 9/18/16.
 //  Copyright © 2016 Mane. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
+//  /Users/areg.gareginyan/Workspace/TravelApp/TravelApp/Application/Managers/DataManager.swiftto delete and recreate this implementation file for your updated model.
 //
 
 import Foundation
@@ -16,6 +16,7 @@ extension Place {
 
     @NSManaged var id: NSNumber
     @NSManaged var title: String
+    @NSManaged var image: NSData?
     @NSManaged var details: PlaceDetails?
 
 }

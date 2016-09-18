@@ -17,7 +17,7 @@
 		BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48921D8EE9BC00BAB40B /* Place.swift */; };
 		BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */; };
 		BA2C48AB1D8EE9BC00BAB40B /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */; };
-		BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */; };
+		BA2C48AC1D8EE9BC00BAB40B /* TravelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48951D8EE9BC00BAB40B /* TravelApp.xcdatamodeld */; };
 		BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */; };
 		BA2C48AE1D8EE9BC00BAB40B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489A1D8EE9BC00BAB40B /* LaunchScreen.storyboard */; };
 		BA2C48AF1D8EE9BC00BAB40B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489C1D8EE9BC00BAB40B /* Main.storyboard */; };
@@ -27,6 +27,8 @@
 		BA2C48B41D8EEFAF00BAB40B /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */; };
 		E4567CFE1D8EE55600D7DD36 /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */; };
 		E4567D091D8EE55600D7DD36 /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */; };
+		E49F9E401D8EEECB001606D9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */; };
+		E49F9E421D8F0A18001606D9 /* ImageLoadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,7 @@
 		BA2C48921D8EE9BC00BAB40B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaceDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetails.swift; sourceTree = "<group>"; };
-		BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrevelApp.xcdatamodel; sourceTree = "<group>"; };
+		BA2C48961D8EE9BC00BAB40B /* TravelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelApp.xcdatamodel; sourceTree = "<group>"; };
 		BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BA2C489B1D8EE9BC00BAB40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA2C489D1D8EE9BC00BAB40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		E4567D041D8EE55600D7DD36 /* TravelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITests.swift; sourceTree = "<group>"; };
 		E4567D0A1D8EE55600D7DD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */,
 				BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */,
 				BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */,
+				E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */,
+				E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -138,7 +144,7 @@
 				BA2C48921D8EE9BC00BAB40B /* Place.swift */,
 				BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */,
 				BA2C48941D8EE9BC00BAB40B /* PlaceDetails.swift */,
-				BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */,
+				BA2C48951D8EE9BC00BAB40B /* TravelApp.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 				BA2C48A71D8EE9BC00BAB40B /* HTTPSessionManager.swift in Sources */,
 				BA2C48A31D8EE9BC00BAB40B /* DetailViewController.swift in Sources */,
 				BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */,
+				E49F9E421D8F0A18001606D9 /* ImageLoadTask.swift in Sources */,
 				BA2C48A51D8EE9BC00BAB40B /* CoreDataManager.swift in Sources */,
 				BA2C48A41D8EE9BC00BAB40B /* MasterViewController.swift in Sources */,
+				E49F9E401D8EEECB001606D9 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,13 +637,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BA2C48951D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld */ = {
+		BA2C48951D8EE9BC00BAB40B /* TravelApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */,
+				BA2C48961D8EE9BC00BAB40B /* TravelApp.xcdatamodel */,
 			);
-			currentVersion = BA2C48961D8EE9BC00BAB40B /* TrevelApp.xcdatamodel */;
-			path = TrevelApp.xcdatamodeld;
+			currentVersion = BA2C48961D8EE9BC00BAB40B /* TravelApp.xcdatamodel */;
+			path = TravelApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

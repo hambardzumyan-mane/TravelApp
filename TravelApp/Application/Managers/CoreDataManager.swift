@@ -13,8 +13,8 @@ import CoreData
 
 class CoreDataManager { //: NSObject {
 
-	private static let storeName: String = "TrevelCoreData.sqlite"
-	private static let modmName = "TrevelApp"
+	private static let storeName: String = "TravelCoreData.sqlite"
+	private static let modmName = "TravelApp"
 
 	//let persistentStoreCoordinator: NSPersistentStoreCoordinator
     
