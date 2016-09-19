@@ -17,33 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+        
 		let splitViewController = self.window!.rootViewController as! UISplitViewController
 		let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count - 1] as! UINavigationController
 		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 		splitViewController.delegate = self
-
-		// let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
-		// let controller = masterNavigationController.topViewController as! MasterViewController
-		// controller.managedObjectContext = self.managedObjectContext
-        
-        /*
-         TODO: - shall be removed
- ImageLoader.sharedInstance.load("casa battlo", completion: imageDidLoad)
- */
 		return true
 	}
     
-    /*
-     TODO: - shall be removed
-    func imageDidLoad(image: UIImage?) -> Void {
-        if (nil != image) {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            let imgView = UIImageView(image: image!)
-            self.window!.rootViewController?.view .addSubview(imgView)
-        })
-        }
-    }
- */
 
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -69,14 +50,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		//self.coreDataManager.saveContext()
 	}
 
-	// MARK: - Split view
+	// MARK: - UISplitViewControllerDelegate
 
 	func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
-		guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-		guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-		if nil == topAsDetailController.place {
-			return true
-		}
-		return false
+		guard let secondaryAsNavController = secondaryViewController as? UINavigationController else {
+            return false
+        }
+		guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else {
+            return false
+        }
+		return nil == topAsDetailController.place
 	}
+    
+    func splitViewController(svc: UISplitViewController, shouldHideViewController vc: UIViewController, inOrientation orientation: UIInterfaceOrientation) -> Bool {
+        return false
+    }
 }

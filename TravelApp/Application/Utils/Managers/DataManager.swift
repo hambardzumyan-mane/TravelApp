@@ -11,7 +11,7 @@ import UIKit
 
 protocol DataManagerDelegate {
     
-    func placesDidLoad(places: [Place])
+    func placesDidLoad(places: [Place], error: NSError?)
 }
 
 class DataManager {
@@ -24,10 +24,10 @@ class DataManager {
     
 	private init() {}
     
-    // MARK: - Public Methods
+    // MARK: - Public Method
+    
     func loadPlaces() {
         guard let items = CoreDataManager.sharedInstance.getPlaces() else {
-            print("TODO")
             HTTPSessionManager.sharedInstance.loadPlaces(self.placesDidLoad)
             return
         }
@@ -35,36 +35,31 @@ class DataManager {
             HTTPSessionManager.sharedInstance.loadPlaces(self.placesDidLoad)
             return
         }
-        self.delegate?.placesDidLoad(items)
+        self.delegate?.placesDidLoad(items, error: nil)
     }
     
-    // MARK: - Private Methods
+    // MARK: - Private Method
     // MARK: Callbacks
     
     private func placesDidLoad(data: NSData?, error: NSError?) -> Void {
-        if nil != error {
-            // TODO
+        if let err = error {
+            NSLog("Error appeared during places list loading. \(err.description)")
+            self.delegate?.placesDidLoad([], error: err)
             return
         }
-        let dict = self.getDictionary(data!)
+        let dict = Utilities.getDictionary(data!) as! Dictionary<String, AnyObject>
+        if dict.isEmpty || nil != dict["error"] {
+            let title = "The places are missing."
+            let message = "The response is not correct. Could you please try it again later."
+            let err = Utilities.createMyError(title, message: message)
+            self.delegate?.placesDidLoad([], error: err)
+            return
+        }
+        
         let items = dict[DataManager.BASE_KEY] as! Array<AnyObject>
 
         let places = CoreDataManager.sharedInstance.savePlaces(items)
-        self.delegate?.placesDidLoad(places)
-    }
-    
-    // MARK: Utilities
-    
-    private func getDictionary(data: NSData) -> NSDictionary {
-        var dictionary: NSDictionary?
-        do {
-            dictionary = (try NSJSONSerialization.JSONObjectWithData(data,
-                options: NSJSONReadingOptions(rawValue: 0))) as? NSDictionary ?? [String: AnyObject]()
-        } catch let error {
-            NSLog("Error appeared during json serialization: \(error)")
-            dictionary = [:]
-        }
-        return dictionary!
+        self.delegate?.placesDidLoad(places, error: nil)
     }
 
 }

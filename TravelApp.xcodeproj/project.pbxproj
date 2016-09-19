@@ -10,9 +10,6 @@
 		BA2C48A21D8EE9BC00BAB40B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */; };
 		BA2C48A31D8EE9BC00BAB40B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */; };
 		BA2C48A41D8EE9BC00BAB40B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */; };
-		BA2C48A51D8EE9BC00BAB40B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */; };
-		BA2C48A61D8EE9BC00BAB40B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */; };
-		BA2C48A71D8EE9BC00BAB40B /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */; };
 		BA2C48A81D8EE9BC00BAB40B /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48911D8EE9BC00BAB40B /* Place+CoreDataProperties.swift */; };
 		BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48921D8EE9BC00BAB40B /* Place.swift */; };
 		BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */; };
@@ -24,11 +21,15 @@
 		BA2C48B01D8EE9BC00BAB40B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA2C489E1D8EE9BC00BAB40B /* Info.plist */; };
 		BA2C48B11D8EE9BC00BAB40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */; };
 		BA2C48B21D8EE9BC00BAB40B /* Resources.json in Resources */ = {isa = PBXBuildFile; fileRef = BA2C48A11D8EE9BC00BAB40B /* Resources.json */; };
-		BA2C48B41D8EEFAF00BAB40B /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */; };
+		BA2C48DC1D902E0E00BAB40B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48D71D902E0E00BAB40B /* CoreDataManager.swift */; };
+		BA2C48DD1D902E0E00BAB40B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48D81D902E0E00BAB40B /* DataManager.swift */; };
+		BA2C48DE1D902E0E00BAB40B /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48D91D902E0E00BAB40B /* HTTPSessionManager.swift */; };
+		BA2C48E21D902E3D00BAB40B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48E11D902E3D00BAB40B /* Utilities.swift */; };
+		BA2C48E51D905FA300BAB40B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48E31D905FA300BAB40B /* ImageLoader.swift */; };
+		BA2C48E61D905FA300BAB40B /* ImageLoadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48E41D905FA300BAB40B /* ImageLoadTask.swift */; };
+		BA2C48E81D90606C00BAB40B /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C48E71D90606C00BAB40B /* PlaceTableViewCell.swift */; };
 		E4567CFE1D8EE55600D7DD36 /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */; };
 		E4567D091D8EE55600D7DD36 /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */; };
-		E49F9E401D8EEECB001606D9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */; };
-		E49F9E421D8F0A18001606D9 /* ImageLoadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,6 @@
 		BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
 		BA2C48911D8EE9BC00BAB40B /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA2C48921D8EE9BC00BAB40B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		BA2C48931D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaceDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -66,7 +64,13 @@
 		BA2C489E1D8EE9BC00BAB40B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA2C48A01D8EE9BC00BAB40B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA2C48A11D8EE9BC00BAB40B /* Resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Resources.json; sourceTree = "<group>"; };
-		BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		BA2C48D71D902E0E00BAB40B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BA2C48D81D902E0E00BAB40B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BA2C48D91D902E0E00BAB40B /* HTTPSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
+		BA2C48E11D902E3D00BAB40B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BA2C48E31D905FA300BAB40B /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		BA2C48E41D905FA300BAB40B /* ImageLoadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadTask.swift; sourceTree = "<group>"; };
+		BA2C48E71D90606C00BAB40B /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		E4567CE21D8EE55500D7DD36 /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567CF91D8EE55600D7DD36 /* TravelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567CFD1D8EE55600D7DD36 /* TravelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppTests.swift; sourceTree = "<group>"; };
@@ -74,8 +78,6 @@
 		E4567D041D8EE55600D7DD36 /* TravelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4567D081D8EE55600D7DD36 /* TravelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITests.swift; sourceTree = "<group>"; };
 		E4567D0A1D8EE55600D7DD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +108,8 @@
 		BA2C48871D8EE9BC00BAB40B /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C48D51D902E0E00BAB40B /* Utils */,
 				BA2C48881D8EE9BC00BAB40B /* Main */,
-				BA2C488C1D8EE9BC00BAB40B /* Managers */,
 				BA2C48901D8EE9BC00BAB40B /* Models */,
 				BA2C48971D8EE9BC00BAB40B /* Views */,
 			);
@@ -120,21 +122,8 @@
 				BA2C48891D8EE9BC00BAB40B /* AppDelegate.swift */,
 				BA2C488A1D8EE9BC00BAB40B /* DetailViewController.swift */,
 				BA2C488B1D8EE9BC00BAB40B /* MasterViewController.swift */,
-				BA2C48B31D8EEFAF00BAB40B /* PlaceTableViewCell.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		BA2C488C1D8EE9BC00BAB40B /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				BA2C488D1D8EE9BC00BAB40B /* CoreDataManager.swift */,
-				BA2C488E1D8EE9BC00BAB40B /* DataManager.swift */,
-				BA2C488F1D8EE9BC00BAB40B /* HTTPSessionManager.swift */,
-				E49F9E3F1D8EEECB001606D9 /* ImageLoader.swift */,
-				E49F9E411D8F0A18001606D9 /* ImageLoadTask.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		BA2C48901D8EE9BC00BAB40B /* Models */ = {
@@ -152,6 +141,7 @@
 		BA2C48971D8EE9BC00BAB40B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C48E71D90606C00BAB40B /* PlaceTableViewCell.swift */,
 				BA2C48981D8EE9BC00BAB40B /* LoadingView.swift */,
 			);
 			path = Views;
@@ -173,6 +163,27 @@
 				BA2C48A11D8EE9BC00BAB40B /* Resources.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA2C48D51D902E0E00BAB40B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48D61D902E0E00BAB40B /* Managers */,
+				BA2C48E31D905FA300BAB40B /* ImageLoader.swift */,
+				BA2C48E41D905FA300BAB40B /* ImageLoadTask.swift */,
+				BA2C48E11D902E3D00BAB40B /* Utilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BA2C48D61D902E0E00BAB40B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C48D71D902E0E00BAB40B /* CoreDataManager.swift */,
+				BA2C48D81D902E0E00BAB40B /* DataManager.swift */,
+				BA2C48D91D902E0E00BAB40B /* HTTPSessionManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		E4567CD91D8EE55500D7DD36 = {
@@ -361,21 +372,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2C48DE1D902E0E00BAB40B /* HTTPSessionManager.swift in Sources */,
 				BA2C48AB1D8EE9BC00BAB40B /* PlaceDetails.swift in Sources */,
+				BA2C48E51D905FA300BAB40B /* ImageLoader.swift in Sources */,
+				BA2C48DD1D902E0E00BAB40B /* DataManager.swift in Sources */,
+				BA2C48E61D905FA300BAB40B /* ImageLoadTask.swift in Sources */,
 				BA2C48A81D8EE9BC00BAB40B /* Place+CoreDataProperties.swift in Sources */,
+				BA2C48E21D902E3D00BAB40B /* Utilities.swift in Sources */,
 				BA2C48A21D8EE9BC00BAB40B /* AppDelegate.swift in Sources */,
-				BA2C48AC1D8EE9BC00BAB40B /* TrevelApp.xcdatamodeld in Sources */,
-				BA2C48B41D8EEFAF00BAB40B /* PlaceTableViewCell.swift in Sources */,
-				BA2C48A61D8EE9BC00BAB40B /* DataManager.swift in Sources */,
+				BA2C48AC1D8EE9BC00BAB40B /* TravelApp.xcdatamodeld in Sources */,
 				BA2C48AD1D8EE9BC00BAB40B /* LoadingView.swift in Sources */,
 				BA2C48A91D8EE9BC00BAB40B /* Place.swift in Sources */,
-				BA2C48A71D8EE9BC00BAB40B /* HTTPSessionManager.swift in Sources */,
+				BA2C48E81D90606C00BAB40B /* PlaceTableViewCell.swift in Sources */,
 				BA2C48A31D8EE9BC00BAB40B /* DetailViewController.swift in Sources */,
 				BA2C48AA1D8EE9BC00BAB40B /* PlaceDetails+CoreDataProperties.swift in Sources */,
-				E49F9E421D8F0A18001606D9 /* ImageLoadTask.swift in Sources */,
-				BA2C48A51D8EE9BC00BAB40B /* CoreDataManager.swift in Sources */,
 				BA2C48A41D8EE9BC00BAB40B /* MasterViewController.swift in Sources */,
-				E49F9E401D8EEECB001606D9 /* ImageLoader.swift in Sources */,
+				BA2C48DC1D902E0E00BAB40B /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E232RTVQ54;
 				INFOPLIST_FILE = TravelApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,6 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E232RTVQ54;
 				INFOPLIST_FILE = TravelApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mane.TravelApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

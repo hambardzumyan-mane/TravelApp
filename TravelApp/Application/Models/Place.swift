@@ -11,7 +11,8 @@ import CoreData
 
 class Place: NSManagedObject {
 
-    private var completion: (() -> Void)?
+    private var detailsLoadCompletion: ((NSError?) -> Void)?
+    private var imageLoadCompletion: ((place: Place) -> Void)?
     
 	convenience init(json: Dictionary<String, AnyObject>, entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
 		self.init(entity: entity, insertIntoManagedObjectContext: context)
@@ -24,49 +25,61 @@ class Place: NSManagedObject {
         self.title = json["title"] as? String ?? ""
         self.details = nil
         self.image = nil
-        ImageLoader.sharedInstance.load(self.title, completion: imageDataDidLoad)
-        
+        self.loadImage(nil)
     }
     
-    private func imageDataDidLoad(data: NSData?) {
-        print("gugush")
-        print(self.title)
-    }
-    
-    func loadDetails(completion: (()->Void)?) {
-        self.completion = completion
+    func loadDetails(completion: ((NSError?)->Void)?) {
+        self.detailsLoadCompletion = completion
         HTTPSessionManager.sharedInstance.loadPlace(id, completion: self.placeDidLoad)
     }
     
-    // MARK: - CallBack
+    func loadImage(completion: ((place: Place) -> Void)?) {
+        self.imageLoadCompletion = completion
+        ImageLoader.sharedInstance.load(self.title, completion: self.imageDataDidLoad)
+    }
+    
+    // MARK: - Private Methods
+    // MARK: CallBack
+    
+    private func imageDataDidLoad(data: NSData?) {
+        self.image = data
+        if nil == data {
+            print("Image was not loaded for \"\(self.title)\" place.")
+            return
+        }
+        print("Image loaded for \"\(self.title)\" place.")
+        self.imageLoadCompletion?(place: self)
+        self.update()
+    }
     
     private func placeDidLoad(data: NSData?, error: NSError?) -> Void {
         if nil != error {
-            // TODO
+            NSLog("Error appeared during \"\(self.title)\" place's details loading. \(error?.description)")
+            self.detailsLoadCompletion?(error)
             return
         }
-        let items = self.getDictionary(data!) as! Dictionary<String, AnyObject>
-        self.savePlaceDetails(items)
-        self.completion?()
-    }
-    
-    // MARK: MV Utilities
-    
-    private func getDictionary(data: NSData) -> NSDictionary {
-        var dictionary: NSDictionary?
-        do {
-            dictionary = (try NSJSONSerialization.JSONObjectWithData(data,
-                options: NSJSONReadingOptions(rawValue: 0))) as? NSDictionary ?? [String: AnyObject]()
-        } catch let error {
-            NSLog("Error appeared during json serialization: \(error)")
-            dictionary = [:]
+        let items = Utilities.getDictionary(data!) as! Dictionary<String, AnyObject>
+        if items.isEmpty || nil != items["error"] {
+            let title = "The details are missing."
+            let message = "There are no details for \"\(self.title)\" place."
+            let err = Utilities.createMyError(title, message: message)
+            self.detailsLoadCompletion?(err)
+            return
         }
-        return dictionary!
+        self.updateDetails(items)
     }
     
-    private func savePlaceDetails(placeDict: Dictionary<String, AnyObject>) {
+    // MARK: Helpers
+    
+    private func updateDetails(placeDict: Dictionary<String, AnyObject>) {
         let details = NSEntityDescription.insertNewObjectForEntityForName(String(PlaceDetails), inManagedObjectContext: CoreDataManager.sharedInstance.managedObjectContext) as! PlaceDetails
+        details.initalize(placeDict)
         self.details = details
+        self.detailsLoadCompletion?(nil)
+        self.update()
+    }
+    
+    private func update() {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             do {
                 try self.managedObjectContext?.save()

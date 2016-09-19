@@ -10,7 +10,7 @@ import UIKit
 
 class HTTPSessionManager: NSObject {
 
-	private let baseURL: String = "http://t21services.herokuapp.com/points"
+	private let BASE_URL: String = "http://t21services.herokuapp.com/points"
 
     static let sharedInstance = HTTPSessionManager()
 
@@ -19,12 +19,12 @@ class HTTPSessionManager: NSObject {
 	// MARK:- Pubilc Methods
 
     func loadPlaces(completion: (data: NSData?, error: NSError?) -> Void) -> Void {
-		let url = NSURL(string: self.baseURL)
+		let url = NSURL(string: self.BASE_URL)
         self.makeAsyncHTTPGetRequest(url!, completion: completion)
 	}
     
     func loadPlace(id: NSNumber, completion: (data: NSData?, error: NSError?) -> Void) -> Void {
-        let url = NSURL(string: "\(self.baseURL)/\(id)")
+        let url = NSURL(string: "\(self.BASE_URL)/\(id)")
         self.makeAsyncHTTPGetRequest(url!, completion: completion)
     }
     
@@ -32,20 +32,7 @@ class HTTPSessionManager: NSObject {
         self.makeAsyncHTTPGetRequest(url, completion: completion)
     }
 
-	// MARK:- Utility Methods
-	// MARK: Perform GET Requests
-
-    func makeSyncHTTPGetRequest(url: NSURL) -> NSData? {
-		let request = NSURLRequest(URL: url)
-		var response: NSURLResponse?
-		do {
-			return try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-		} catch(let e) {
-            // TODO: ADD
-			NSLog("There was an error during performing the \(url) request. Error \(e)")
-		}
-		return nil
-	}
+	// MARK:- Utility Method
 
     func makeAsyncHTTPGetRequest(url: NSURL, completion: (NSData?, NSError?) -> Void) {
 		let request = NSMutableURLRequest(URL: url)

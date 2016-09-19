@@ -15,11 +15,14 @@ class PlaceTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        self.titleLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        self.titleLabel.layer.shadowOffset = CGSize(width: 0.0, height: -1.0)
+        self.titleLabel.layer.shadowOpacity = 1.0;
+        self.titleLabel.layer.shadowRadius = 2.0;
     }
-
 }

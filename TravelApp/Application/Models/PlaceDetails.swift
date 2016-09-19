@@ -18,11 +18,11 @@ class PlaceDetails: NSManagedObject {
     }
     
     func initalize(json: Dictionary<String, AnyObject>) {
-        self.transport = json["transport"] as? String ?? ""
-        self.details = json["description"] as? String ?? ""
-        self.phone = json["phone"] as? String ?? ""
-        self.address = json["address"] as? String ?? ""
-        self.email = json["email"] as? String ?? ""
+        self.transport = json["transport"] as? String ?? "Not specified"
+        self.details = json["description"] as? String ?? "Not specified"
+        self.phone = json["phone"] as? String ?? "Not specified"
+        self.address = json["address"] as? String ?? "Not specified"
+        self.email = json["email"] as? String ?? "Not specified"
         
         let geo = json["geocoordinates"] as? String ?? ""
         let geoArr = geo.componentsSeparatedByString(",")
@@ -33,5 +33,4 @@ class PlaceDetails: NSManagedObject {
         self.latitude = Double(geoArr[0])
         self.longitude = Double(geoArr[1])
     }
-    
 }
